@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpson characters</title>
+
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    background-color: #343434;
+    overflow-y: auto;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#cssportal-grid {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    width: 90%; 
+    height: auto; 
+    max-width: 1400px;
+    background-color: #fff; 
+    padding: 10px;
+    box-shadow: 0 0 20px black; 
+}
+
+#cssportal-grid div {
+    background-color: rgba(0, 0, 0, 0.1); 
+    min-height: 100px; 
+}
+
+#cssportal-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 6 / 4;
+}
+
+#div2 {
+    grid-area: 1 / 4 / 5 / 7;
+}
+
+#div3 {
+    grid-area: 1 / 7 / 5 / 10;
+}
+
+#div4 {
+    grid-area: 1 / 10 / 6 / 13;
+}
+
+#div5 {
+    grid-area: 5 / 6 / 9 / 10;
+}
+
+#div6 {
+    grid-area: 6 / 1 / 13 / 4;
+}
+
+#div7 {
+    grid-area: 5 / 4 / 9 / 6;
+}
+
+#div8 {
+    grid-area: 9 / 4 / 13 / 6;
+}
+
+#div9 {
+    grid-area: 9 / 6 / 13 / 9;
+}
+
+#div10 {
+    grid-area: 6 / 10 / 9 / 13;
+}
+
+#div11 {
+    grid-area: 9 / 9 / 13 / 13;
+}
+
+/* Media Queries */
+
+/* Mobile Portrait */
+@media (max-width: 375px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(11, auto);
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        height: auto; 
+        max-width: 375px;
+    }
+
+    #cssportal-grid div {
+        min-height: 200px;
+    }
+
+    #div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9, #div10, #div11 {
+        grid-area: auto / auto / auto / auto;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 376px) and (max-width: 767px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        height: auto; 
+        max-width: 767px;
+    }
+
+    #cssportal-grid div {
+        min-height: 150px; 
+    }
+
+    #div1, #div3, #div5, #div7, #div9, #div11 {
+        grid-area: auto / 1 / auto / 2;
+    }
+
+    #div2, #div4, #div6, #div8, #div10 {
+        grid-area: auto / 2 / auto / 3;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        height: auto; 
+        max-width: 1024px;
+    }
+
+    #cssportal-grid div {
+        min-height: 200px; 
+    }
+
+    #div1, #div4, #div7, #div10 {
+        grid-area: auto / 1 / auto / 2;
+    }
+
+    #div2, #div5, #div8, #div11 {
+        grid-area: auto / 2 / auto / 3;
+    }
+
+    #div3, #div6, #div9 {
+        grid-area: auto / 3 / auto / 4;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cssportal-grid {
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        width: 100%;
+        height: 100%; 
+        max-width: 1400px; 
+        max-height: 800px;
+    }
+
+    #cssportal-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+}  
+    </style>
+
+</head>
+<body>
+    <div id="cssportal-grid">
+        <div id="div1">
+            <img src="./Images/Simpson/HOMER.png" alt="Illustrazione di Homer Simpson prova a fare la kamehameha di Goku" loading="lazy">
+        </div>
+        <div id="div2">
+            <img src="./Images/Simpson/bart-naruto.png" alt="Illustrazione di Bart Simpson vestito da Naruto" loading="lazy">
+        </div>
+        <div id="div3">
+            <img src="./Images/Simpson/maggie.png" alt="Illustrazione di Maggie Simpson" loading="lazy">
+        </div>
+        <div id="div4">
+            <img src="./Images/Simpson/HOMER-ZEN.png" alt="Illustrazione di Homer zen" loading="lazy">
+        </div>
+        <div id="div5">
+            <img src="./Images/Simpson/Homer-Dracula.png" alt="Illustrazione di Homer Simpson in versione dracula" loading="lazy">
+        </div>
+        <div id="div6">
+            <img src="./Images/Simpson/homer-terminator-3.png" alt="Illustrazione di Terminator" loading="lazy">
+        </div>
+        <div id="div7">
+            <img src="./Images/Simpson/BART-PUMA-2.png" alt="Illustrazione di Bart Simpson vestito Puma" loading="lazy">
+        </div>
+        <div id="div8">
+            <img src="./Images/Simpson/Wonder-Marge.png" alt="Illustrazione di Marge Simpson vestita da Wonder Woman" loading="lazy">
+        </div>
+        <div id="div9">
+            <img src="./Images/Simpson/Hulk X Homer.png" alt="Illustrazione di Homer Simpson mentre sfida Hulk" loading="lazy">
+        </div>
+        <div id="div10">
+            <img src="./Images/Simpson/krusty.png" alt="Illustrazione di Krusty il clown" loading="lazy">
+        </div>
+        <div id="div11">
+            <img src="./Images/Simpson/Homer-ciambella.png" alt="Illustrazione di Homer Simpson al mare" loading="lazy">
+        </div>
+    </div>
+    
+</body>
+</html>

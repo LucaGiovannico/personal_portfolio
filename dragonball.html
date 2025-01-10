@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball characters</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    background-color: #343434;
+    overflow-y: auto;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#cssportal-grid {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    width: 90%; 
+    height: auto; 
+    max-width: 1400px; 
+    background-color: #fff;
+    padding: 10px; 
+    box-shadow: 0 0 20px black;
+}
+
+#cssportal-grid div {
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 100px;
+}
+
+#cssportal-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#div1 {
+    grid-area: 1 / 1 / 8 / 4;
+    background-color: rgba(84,242,253, 0.5);
+}
+
+#div2 {
+    grid-area: 1 / 4 / 6 / 7;
+}
+
+#div3 {
+    grid-area: 1 / 7 / 8 / 11;
+    background-color: rgba(133,167,4, 0.5);
+}
+
+#div4 {
+    grid-area: 1 / 11 / 8 / 13;
+    background-color: rgba(240,114,51, 0.5);
+}
+
+#div5 {
+    grid-area: 8 / 1 / 13 / 4;
+    background-color: rgba(64,204,39, 0.5);
+}
+
+#div6 {
+    grid-area: 6 / 4 / 13 / 7;
+    background-color: rgba(46,129,56, 0.5);
+}
+
+#div7 {
+    grid-area: 8 / 7 / 13 / 10;
+    background-color: rgba(37,99,154, 0.5);
+}
+
+#div8 {
+    grid-area: 8 / 10 / 13 / 13;
+    background-color: rgba(151,233,46, 0.5);
+}
+
+/* Media Queries */
+
+/* Mobile Portrait */
+@media (max-width: 375px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        height: auto; 
+        max-width: 375px;
+    }
+
+    #cssportal-grid div {
+        min-height: 200px; 
+    }
+
+    #div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8 {
+        grid-area: auto / auto / auto / auto;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 376px) and (max-width: 767px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        height: auto;
+        max-width: 767px;
+    }
+
+    #cssportal-grid div {
+        min-height: 150px; 
+    }
+
+    #div1, #div3, #div5, #div7 {
+        grid-area: auto / 1 / auto / 2;
+    }
+
+    #div2, #div4, #div6, #div8 {
+        grid-area: auto / 2 / auto / 3;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #cssportal-grid {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 90%;
+        height: auto; 
+        max-width: 1024px;
+    }
+
+    #cssportal-grid div {
+        min-height: 200px; 
+    }
+
+    #div1, #div4, #div7 {
+        grid-area: auto / 1 / auto / 2;
+    }
+
+    #div2, #div5, #div8 {
+        grid-area: auto / 2 / auto / 3;
+    }
+
+    #div3, #div6 {
+        grid-area: auto / 3 / auto / 4;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #cssportal-grid {
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        width: 100%; 
+        height: 100%; 
+        max-width: 1400px; 
+        max-height: 800px;
+    }
+
+    #cssportal-grid img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+    }
+}
+    </style>
+
+</head>
+<body>
+
+    <div id="cssportal-grid">
+        <div id="div1">
+            <img src="./Images/Dragon Ball/GENIODELLETARTARUGHE.png" alt="Illustrazione del Genio delle tartarughe di Dragonball" loading="lazy">
+        </div>
+        <div id="div2">
+            <img src="./Images/Dragon Ball/BESTFRIENDSEVER1.png" alt="Illustrazione di Goku insieme a Crilin" loading="lazy">
+        </div>
+        <div id="div3">
+            <img src="./Images/Dragon Ball/GOKUSSBLU.png" alt="Illustrazione di Goku SSBlue" loading="lazy">
+        </div>
+        <div id="div4">
+            <img src="./Images/Dragon Ball/gotenks-2.png" alt="Illustrazione di Gotenks" loading="lazy">
+        </div>
+        <div id="div5">
+            <img src="./Images/Dragon Ball/VEGETAM.png" alt="Illustrazione di Vegeta versione Majin" loading="lazy">
+        </div>
+        <div id="div6">
+            <img src="./Images/Dragon Ball/GOHAN.png" alt="Illustrazione di Gohan di Dragonball" loading="lazy">
+        </div>
+        <div id="div7">
+            <img src="./Images/Dragon Ball/JIREN.jpg" alt="Illustrazione di Jiren di Dragonball Super" loading="lazy">
+        </div>
+        <div id="div8">
+            <img src="./Images/Dragon Ball/GOKU-FRIEZA.png" alt="Illustrazione di Goku vestito da Frieza" loading="lazy">
+        </div>
+    </div>
+
+    
+</body>
+</html>
